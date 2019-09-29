@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="src/emails-editor.css">
+</head>
+<body>
+    <div class="grey-zone">
+        <h2>Share <b>Board Name</b> with other</h2>
+        <div class="container" id="emails-editor"></div>
+    </div>
+    <div class="footer">
+        <button class="prm-btn" onclick="emailsEditor.addRandomEmail()">
+            Add email
+        </button>
+        <button class="prm-btn" onclick="alert(emailsEditor.validEmailsCount())">
+            Get email count
+        </button>
+    </div>
+
+    <script src="src/emails-editor.js"></script>
+    <script>
+        const container = document.querySelector('#emails-editor');
+        let emailsEditor = EmailsEditor(container);
+        emailsEditor.setOnAddEmailHandler(function(event) {
+            console.log(`Добавили ${event.detail}`);
+        });
+        emailsEditor.setOnRemoveEmailHandler(function(event) {
+            console.log(`Удалили ${event.detail}`);
+        });
+        emailsEditor.setEmails(["godor@mail.com", "kofe@sidr.ru", "ditko.b"]);
+    </script>
+</body>
+</html>

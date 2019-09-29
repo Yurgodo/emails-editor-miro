@@ -1,0 +1,79 @@
+@emails-editor-font: "OpenSans";
+
+.emails-editor {
+  font-family: @emails-editor-font, serif;;
+  font-size: 20px;
+  border: 1px solid #c3c2cf;
+  border-radius: 4px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 40px;
+  background-color: #fff;
+  padding: 7px 4px 3px 6px;
+  color: #4d4d4d;
+  max-width: inherit;
+  height: 100%;
+
+  .current-input {
+    font: inherit;
+    border: none;
+    padding-left: 14px;
+    padding-right: 7px;
+    margin-right: 4px;
+    margin-bottom: 3px;
+    height: 24px;
+    line-height: 24px;
+    display: inline-block;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .email {
+    position: relative;
+    padding-left: 14px;
+    padding-right: 9px;
+    margin-right: 4px;
+    margin-bottom: 3px;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    height: 29px;
+    line-height: 29px;
+    background-color: rgba(102, 152, 255, 0.2);
+    border-radius: 14px;
+    .email-content {
+      position: relative;
+      max-width: calc(100% - 13px);
+      max-height: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+      padding-right: 4px;
+    }
+    .email-delete {
+      display: inline-block;
+      height: 24px;
+      width: 10px;
+      font-size: 25px;
+      font-weight: lighter;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-right: -1px;
+      &:before {
+        content: '\D7';
+      }
+    }
+    &.invalid {
+      background-color: transparent;
+      .email-content {
+        border-bottom: 1px dashed #d14836;
+      }
+    }
+  }
+}

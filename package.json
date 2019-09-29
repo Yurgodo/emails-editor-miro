@@ -1,0 +1,13 @@
+{
+  "name": "email-editor-miro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "ygodorov",
+  "license": "MIT",
+  "devDependencies": {
+    "less": "^3.10.3"
+  }
+}
