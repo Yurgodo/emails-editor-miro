@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" type="text/css" href="src/emails-editor.css">
+    <link rel="stylesheet" type="text/css" href="./dist/index.css">
+    <link rel="stylesheet" type="text/css" href="./dist/emails-editor.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans"/>
 </head>
 <body>
     <div class="grey-zone">
-        <h2>Share <b>Board Name</b> with other</h2>
+        <h2>Share <b>Board name</b> with other</h2>
         <div class="container" id="emails-editor"></div>
     </div>
     <div class="footer">
@@ -19,8 +20,7 @@
             Get email count
         </button>
     </div>
-
-    <script src="src/emails-editor.js"></script>
+    <script src="./dist/emails-editor.js"></script>
     <script>
         const container = document.querySelector('#emails-editor');
         let emailsEditor = EmailsEditor(container);
@@ -30,7 +30,7 @@
         emailsEditor.setOnRemoveEmailHandler(function(event) {
             console.log(`Удалили ${event.detail}`);
         });
-        emailsEditor.setEmails(["godor@mail.com", "kofe@sidr.ru", "ditko.b"]);
+        emailsEditor.setEmails(["sidorov@gmail.com"]);
     </script>
 </body>
 </html>
